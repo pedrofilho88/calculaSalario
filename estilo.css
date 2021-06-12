@@ -1,0 +1,130 @@
+
+/*cor igual a da TKE
+
+#00A0F0
+
+margin-left: 8px;
+  margin-top: 55px;
+  margin-left: 25px;
+
+*/
+
+h1 {
+  color: white;
+  padding-top: 7px;
+  padding-left: 20px;
+  font-size: 40px;
+
+
+}
+
+
+body{
+  background-color: #00A0F0;
+}
+.resultado{
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+  font-family: sans-serif;
+  border: solid 0.1px black;
+  border-radius: 6px;
+}
+
+span{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.cab {
+  margin-left: 10px;
+  display: inline-flex;  
+  font-family: sans-serif;  
+}
+
+
+
+
+
+select, h5{
+    margin-right:5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.cab > .imagem {
+  background-color: white;  
+  margin-bottom: 15px;
+  padding-top: 13px;
+  padding-right: 12px;
+  padding-left: 12px;
+  border-radius: 7px;
+
+}
+button {
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+
+select, button{
+  background-color: #00A0F0;
+  font-weight: bold;
+  font-family: sans-serif;
+  border: solid 0.1px black;
+  font-size: 17px;
+  border-radius: 6px;
+  color: white;
+  width: 150px;
+  text-align: center;
+  
+}
+option{
+  font-weight: bold;
+  align-items: center;
+}
+
+input{
+  margin-left: 8px;
+  border-radius: 6px;  
+}
+ 
+output {
+  color: red;
+  margin-right: 15px;
+  margin-left: 8px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#liquido{
+  color: darkgreen;
+  font-weight: bold;
+}
+#bruto{
+  color: darkgreen;
+  font-weight: bold;
+}
+
+#inss{
+  color: red;
+  font-weight: bold;
+}
+#irrf{
+  color: red;
+  font-weight: bold;
+}
+
+
+.itens{
+  background-color: #eee;
+  font-family: sans-serif;
+  border: solid 0.1px black;
+  border-radius: 6px;
+
+  
+}
+.feriadosMes{
+  margin-bottom: 15px;
+}
+
