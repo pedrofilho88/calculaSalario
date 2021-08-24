@@ -8,6 +8,14 @@ margin-left: 8px;
   margin-left: 25px;
 
 */
+.ui-datepicker-calendar {
+  display: none;
+}    
+
+*{
+  font-family: Ubuntu, sans-serif;
+  
+}
 
 h1 {
   color: white;
@@ -17,59 +25,44 @@ h1 {
 }
 h5 {
   font-size: 17px;
+  color: white;
 }
 
 body{
-  background-color: #00A0F0;
+  background-image: linear-gradient(-25deg, white, black 15%, blue 80%);
 }
-.resultado1{
-  display: flex;
-  justify-content: space-between;
-  background-color: #eee;
-  font-family: Ubuntu;
-  /* border: solid 0.1px 0.1px 0.1px 0px black; */
-  border-radius: 10px 10px 0px 0px;
-  /* margin-top: 20px; */
-  /* margin-bottom: 5px; */
- 
-}
-/* th{
-  margin-left: 10px;
-  margin-right: 10px;
-} */
 
 table{
   margin: 0; padding: 0; box-sizing: border-box;
   width: 100%;
   box-shadow: 7px 7px 7px black;
-  font-family: Ubuntu;
   border-radius: 10px 10px 10px 10px;
+  font-size: 13px;
   
   
 }
 th, td {
-  padding: 10px;
+  padding: 3px;
   border-radius: 10px 10px 10px 10px;
 }
 .content { display: flex; margin: auto;}
-tbody {
-  /* box-shadow: 7px 7px 7px black; */
-  /* justify-content: space-between; */
-  /* align-items: flex-start; */
-}
 /* Essa propriedade faz com que quando o cursor passar por cima mude de cor */
-tbody tr:hover {
-  background-color: #e0adad;
+tbody td:hover {
+  background-color: white;
+  /* background-color: #e0adad; */
 }
 tfoot{
   background-color:  #444;
   color: #fff;
   font-weight: bold;
-  
-
 }
 
-
+footer {
+  padding-top: 30px;
+  font-weight: 100;
+  font-size: small;
+  color: red
+}
   
   
 .saida {
@@ -78,8 +71,7 @@ tfoot{
   margin-bottom: 5px;
   margin: 8px;
   box-shadow: 5px 5px 5px black;
-  background-color: #eee;
-  
+  background-color: #ccc;
 }
 
 span{
@@ -90,18 +82,13 @@ span{
 .cab {
   margin-left: 10px;
   display: inline-flex;  
-  font-family: Ubuntu;  
 }
-
-
-
 
 select, h5{
     margin-right:10px;
     margin-left: 10px;
     margin-top: 10px;
-    margin-bottom: 10px;
-    font-family: Ubuntu;
+    margin-bottom: 0px;
 }
 
 .cab > .imagem {
@@ -114,28 +101,28 @@ select, h5{
 
 }
 
-
 select, button{
-  background-color: #00A0F0;
+  /* background-color: #00A0F0; */
+  background-color: white;  
   font-weight: bold;
-  font-family: Orbitron;
   border: solid 0.1px black;
   font-size: 17px;
   border-radius: 6px;
-  color: white;
+  color: black;
   width: 150px;
   text-align: center;
-  
 }
+
 option{
   font-weight: bold;
   align-items: center;
 }
 
 button {
-  margin-left: 8px;
+  margin-left: 30px;
   margin-bottom: 8px;
   background-color: gray;
+  font-family: Orbitron, sans-serif;  
   color: black;
   font-weight: bold;
   border: solid 2px black;
@@ -148,39 +135,14 @@ input{
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 6px;
-  font-family: Ubuntu;  
 }
 
-#liquido{
-  color: darkgreen;
-  font-weight: bold;
-}
-#bruto{
+.receitas{
   color: darkgreen;
   font-weight: bold;
 }
 
-#inss{
+.descontos{
   color: red;
   font-weight: bold;
 }
-#irrf{
-  color: red;
-  font-weight: bold;
-}
-
-
-
-
-/* .itens{
-  background-color: #eee;
-  font-family: Ubuntu;
-  border: solid 0.1px black;
-  border-radius: 6px;
-
-  
-} */
-/* .feriadosMes{
-  margin-bottom: 15px;
-} */
-

@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/webp" href="salary.webp">
     <title>Calcula SALÁRIO </title>
     <link rel="stylesheet" type="text/css" href="estilo.css">
     <link  href="https://fonts.googleapis.com/css2?family=Orbitron&family=Ubuntu:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
     <script src="biblio.js"> </script>
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+    
+    
 
 </head>
 
@@ -16,17 +22,32 @@
 <!-- onkeyup="executa();" -->
 
 <body>
+    
     <div class="cab">
         <div class="imagem">
-            <img src="salary.webp" width="90" height="88">
+            <img src="salary.webp"  width="90" height="88">
+            <!-- <img src="salary.webp" width="10%" height="10%"> -->
         </div>
         <h1>Calcula Salário</h1>
     </div>
         <h5>Digite Salário Base</h5>
-        <input type="text" maxlength="10" onkeyup="transformaCampo('salarioBase');" id="salarioBase">
-    
-    <button type="button" onclick="executa();">CALCULAR</button>
+        <input type="text" maxlength="10" onkeyup="transformaCampo('salarioBase');" id="salarioBase">    
+    <button id="botao" type="button" onclick="executa();">CALCULAR</button>
     <br>
+    <h5>Mês de Referência</h5>
+    <input name="date" type="text" id="calendario"  />
+    <span>
+        <h5>Horas Extras 50%</h5>
+        <input type="number" id=hr50 value="0">
+    </span>
+    <span>
+        <h5>Horas Extras 100%</h5>
+        <input type="number" id=hr100 value="0">
+    </span>
+    <span>
+        <h5>Horas Sobre Aviso</h5>
+        <input type="number" id=hrsa value="0">
+    </span>
     <div class=saida>
         <table >
             
@@ -38,10 +59,10 @@
                     <td>Imposto de Renda</td>
                 </tr>
                 <tr>
-                   <td id="bruto" ></td>
-                   <td id="liquido"></td>
-                   <td id="inss"></td>
-                   <td id="irrf"></td>
+                   <td id="bruto" class="receitas"></td>
+                   <td id="liquido" class="receitas"></td>
+                   <td id="inss" class="descontos"></td>
+                   <td id="irrf" class="descontos"></td>
                 </tr>
                 <tr>
                     <td>Hora Extra 100%</td>
@@ -50,10 +71,10 @@
                     <td>Horas Extras Total</td>
                 </tr>
                 <tr>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
+                   <td id=hrCem class="receitas"></td>
+                   <td id=hrCinquenta class="receitas" ></td>
+                   <td id="hrSobreAviso" class="receitas"></td>
+                   <td id="heTotal" class="receitas"></td>
                 </tr>
                 <tr>
                     <td>FGTS do Mês</td>
@@ -62,21 +83,22 @@
                     <td>Total de Descontos</td>
                 </tr>
                 <tr>
-                   <td></td>
-                   <td></td>
-                   <td></td>
-                   <td></td>
+                   <td id="fgtsMes" class="receitas"></td>
+                   <td id="fInss" class="descontos"></td>
+                   <td id="fIrff" class="descontos"></td>
+                   <td id=tDescontos class="descontos"></td>
                 </tr>
-            </tbody>
-            
-        
+            </tbody>        
         
         </table>
          
     </div>
 
 </body>
+<footer> Densenvolvido por Pedro Santos<br>pedrofilhooliveirasantos@gmail.com</footer>
+
 
 <script src="server.js"> </script>
+<script src="calendario.js"> </script>
 
 </html>
