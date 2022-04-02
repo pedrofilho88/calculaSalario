@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css">
+    <script type="text/javascript">
+        $(function() {
+            $('.date-picker').datepicker( {
+                changeMonth: true,
+    changeYear: true,
+    showButtonPanel: true,
+            
+            
+            dateFormat: 'MM yy',
+            monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
+            monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+            onClose: function(dateText, inst) { 
+                $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+                var date = new Date(inst.selectedYear,inst.selectedMonth, 1);
+                console.log(date.toString());
+           //  document.getElementById('saida').innerHTML = (date.getMonth()+1).toString();
+            //document.getElementById('saida').innerHTML = date.toString();
+            // var x = new Date(date.getFullYear(), (date.getMonth()+1), 0);
+            // for(i=x.getDate(); i>1; i--){
+                // y = new Date (date.getFullYear(),date.getMonth(), x.getDate - i );
+                // if(y.getDay() == 0){
+                    // console.log("domingo");
+                    // document.getElementById('saida2').innerHTML = x.getDate().toString();
+                // }
+            // }
+            // document.getElementById('saida').innerHTML = x.getDate().toString();
+
+
+            }
+            });
+        });
+
+        
+
+    </script>
+    <style>
+    .ui-datepicker-calendar {
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <label for="startDate">Date :</label>
+    <input name="startDate" id="startDate" class="date-picker" />
+    <h5 id="saida">-></h5>
+    <h5 id="saida2">-></h5>
+</body>
+</html>
